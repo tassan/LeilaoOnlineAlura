@@ -9,7 +9,7 @@ namespace Alura.LeilaoOnline.Tests
         // http://wiki.c2.com/?ArrangeActAssert
 
         [Theory]
-        [InlineData(1000, new double[] { 800, 900, 1000, 990 })]
+        [InlineData(1200, new double[] { 800, 900, 1000, 1200 })]
         [InlineData(1000, new double[] { 800, 900, 990, 1000 })]
         [InlineData(800, new double[] { 800 })]
         public void RetornaMaiorValorDadoLeilaoComPeloMenosUmLance(double valorEsperado, double[] ofertas)
