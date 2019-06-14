@@ -13,10 +13,19 @@ namespace Alura.LeilaoOnline.ConsoleApp
 
         private static void Verifica(double esperado, double obtivo)
         {
+            var cor = Console.ForegroundColor;
             if (esperado == obtivo)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Teste OK");
+            }
             else
-                Console.WriteLine($"Teste FALHOU!\nEsperado: {esperado}\nObtido: {obtivo}");
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Teste FALHOU! Esperado: {esperado} Obtido: {obtivo}");
+            }
+
+            Console.ForegroundColor = cor;
         }
 
         private static void LeilaoComVariosLances()
