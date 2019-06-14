@@ -14,7 +14,7 @@ namespace Alura.LeilaoOnline.Tests
         [InlineData(800, new double[] { 800 })]
         public void RetornaMaiorValorDadoLeilaoComPeloMenosUmLance(double valorEsperado, double[] ofertas)
         {
-            // Arranje - Configura Cenário
+            // Arrange - Configura Cenário
             var leilao = new Leilao("Van Gogh");
             var fulano = new Interessada("Fulano", leilao);
 
@@ -33,7 +33,7 @@ namespace Alura.LeilaoOnline.Tests
         [Fact]
         public void RetornaZeroDadoLeilaoSemLances()
         {
-            // Arranje - Configura Cenário
+            // Arrange - Configura Cenário
             var leilao = new Leilao("Van Gogh");
 
             // Act - Método sob teste
