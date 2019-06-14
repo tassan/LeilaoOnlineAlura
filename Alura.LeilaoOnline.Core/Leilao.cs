@@ -19,6 +19,6 @@ namespace Alura.LeilaoOnline.Core
         public void RecebeLance(Interessada cliente, double valor) => _lances.Add(new Lance(cliente, valor));
 
         public void IniciaPregao() { }
-        public void TerminaPregao() => Ganhador = Lances.Last();
+        public void TerminaPregao() => Ganhador = Lances.OrderBy(l => l.Valor).Last();
     }
 }
