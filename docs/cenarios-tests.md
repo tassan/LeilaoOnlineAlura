@@ -8,6 +8,6 @@
 
 ## 2. Leilão sem lance nenhum
 
-- Dado um leilão sem um lance
+- Dado um leilão sem qualquer lance
 - Quando o pregão/leilão termina
 - Então ??
