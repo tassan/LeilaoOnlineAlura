@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Alura.LeilaoOnline.Core
 {
@@ -9,6 +8,7 @@ namespace Alura.LeilaoOnline.Core
         private readonly IList<Lance> _lances;
         public IEnumerable<Lance> Lances => _lances;
         public string Peca { get; set; }
+        public Lance Ganhador { get; private set; }
 
         public Leilao(string peca)
         {
@@ -19,6 +19,6 @@ namespace Alura.LeilaoOnline.Core
         public void RecebeLance(Interessada cliente, double valor) => _lances.Add(new Lance(cliente, valor));
 
         public void IniciaPregao() { }
-        public void TerminaPregao() { }
+        public void TerminaPregao() => Ganhador = Lances.Last();
     }
 }
