@@ -11,10 +11,10 @@ namespace Alura.LeilaoOnline.ConsoleApp
             LeilaoComApenasUmLance();
         }
 
-        private static void Verifica(double esperado, double obtivo)
+        private static void Verifica(double esperado, double obtido)
         {
             var cor = Console.ForegroundColor;
-            if (esperado == obtivo)
+            if (esperado == obtido)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Teste OK");
@@ -22,7 +22,7 @@ namespace Alura.LeilaoOnline.ConsoleApp
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Teste FALHOU! Esperado: {esperado} Obtido: {obtivo}");
+                Console.WriteLine($"Teste FALHOU! Esperado: {esperado} Obtido: {obtido}");
             }
 
             Console.ForegroundColor = cor;
