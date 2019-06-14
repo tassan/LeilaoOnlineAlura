@@ -20,10 +20,10 @@ namespace Alura.LeilaoOnline.Tests
             leilao.RecebeLance(fulano, 1000);
             leilao.RecebeLance(beltrano, 1400);
 
-            //Act - Método sob teste
+            // Act - Método sob teste
             leilao.TerminaPregao();
 
-            //Assert
+            // Assert
             var valorEsperado = 1400;
             var valorObtido = leilao.Ganhador.Valor;
 
