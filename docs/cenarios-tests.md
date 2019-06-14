@@ -14,6 +14,6 @@
 
 ## 3. Leilão finalizado recebe lance
 
-- Dado leilão finalizado
+- Dado leilão finalizado com X lances
 - Quando leilão recebe nova oferta de lance
-- Então esse novo lance é ignorado
+- Então a quantidade de lances continua sendo X
