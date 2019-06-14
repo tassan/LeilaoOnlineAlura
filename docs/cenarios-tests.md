@@ -10,4 +10,4 @@
 
 - Dado um leilão sem qualquer lance
 - Quando o pregão/leilão termina
-- Então ??
+- Então o valor do lance ganhador é zero
