@@ -11,3 +11,9 @@
 - Dado um leilão sem qualquer lance
 - Quando o pregão/leilão termina
 - Então o valor do lance ganhador é zero
+
+## 3. Leilão finalizado recebe lance
+
+- Dado leilão finalizado
+- Quando leilão recebe nova oferta de lance
+- Então esse novo lance é ignorado
