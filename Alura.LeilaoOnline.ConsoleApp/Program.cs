@@ -7,6 +7,13 @@ namespace Alura.LeilaoOnline.ConsoleApp
     {
         static void Main()
         {
+            LeilaoComVariosLances();
+            LeilaoComApenasUmLance();
+        }
+
+        private static void LeilaoComVariosLances()
+        {
+
             /// Padrão ArrangeActAssert
             /// http://wiki.c2.com/?ArrangeActAssert
             /// 
@@ -26,6 +33,28 @@ namespace Alura.LeilaoOnline.ConsoleApp
 
             //Assert
             var valorEsperado = 1000;
+            var valorObtido = leilao.Ganhador.Valor;
+
+            if (valorEsperado == valorObtido)
+                Console.WriteLine("Teste OK");
+            else
+                Console.WriteLine($"Teste FALHOU!\nEsperado: {valorEsperado}\nObtido: {valorObtido}");
+        }
+
+        private static void LeilaoComApenasUmLance()
+        {
+            // Arranje - Configura Cenário
+            var leilao = new Leilao("Van Gogh");
+            var fulano = new Interessada("Fulano", leilao);
+            var maria = new Interessada("Maria", leilao);
+
+            leilao.RecebeLance(fulano, 800);
+
+            //Act - Método sob teste
+            leilao.TerminaPregao();
+
+            //Assert
+            var valorEsperado = 800;
             var valorObtido = leilao.Ganhador.Valor;
 
             if (valorEsperado == valorObtido)
